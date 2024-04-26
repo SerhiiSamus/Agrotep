@@ -55,8 +55,12 @@ header {
 .nav-item {
   text-wrap: nowrap;
   padding: 15px;
+
   /* border: 2px solid #eff3f3; */
   /* border-radius: 30px; */
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
   font-weight: 500;
   list-style: none;
   color: #eff3f3;
@@ -64,9 +68,6 @@ header {
   letter-spacing: 2px;
   transition: 0.7s;
 
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
   /* position: relative;
   color: #2d3a4cd8; */
 }
@@ -75,6 +76,15 @@ header {
   border-radius: 30px; */
   background-color: #eff3f3;
   color: black;
+}
+.nav-item-link {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-weight: 500;
+  list-style: none;
 }
 
 /* .nav-item::before {
