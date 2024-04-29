@@ -86,8 +86,8 @@
             та застосування інноваційних технологій в сфері логістики забезпечує
             надійність та своєчасність кожного перевезення. Ми гарантуємо
             незмінну найвищу якість кожного перевезення для наших партнерів!
-            <span class="history-text-bg"></span>
           </p>
+          <span class="history-text-bg"></span>
           <img src="assets/img/aaa.png" alt="" class="logo-3d" />
         </div>
       </section>
@@ -99,9 +99,13 @@
             <span class="exp-bg-text">Надійно</span>
           </div>
           <div class="exp-years">
-            <img class="exp-years-img" src="assets/img/30_3d1.png" alt="" />
             <img
-              class="exp-years-text exp-years-img2"
+              class="exp-years-img exp-3d"
+              src="assets/img/30_3d1.png"
+              alt=""
+            />
+            <img
+              class="exp-years-text exp-years-img2 exp-3d"
               src="assets/img/exp_3d.png"
               alt=""
             />
@@ -209,7 +213,6 @@
       </section>
     </main>
     <footer style="background-color: #242b33">
-      <!-- <h3 class="footer-title">Контакти</h3> -->
       <div class="footer-content container">
         <div class="footer-card">
           <h4 class="footer-card-title">Інформація</h4>
@@ -221,18 +224,6 @@
               <li class="footer-nav-item">Контакти</li>
             </ul>
           </nav>
-          <!-- <div class="footer-card-row">
-            <h5 class="card-row-title">Адреса:</h5>
-            <p class="card-row-info">м. Київ, вул. Академіка Бутлерова 8</p>
-          </div>
-          <div class="footer-card-row">
-            <h5 class="card-row-title">Телефони:</h5>
-            <p class="card-row-info">+380952066450</p>
-          </div>
-          <div class="footer-card-row">
-            <h5 class="card-row-title">E-mail:</h5>
-            <p class="card-row-info">hotline@agrotep.kiev.ua</p>
-          </div> -->
         </div>
         <div class="footer-card">
           <h4 class="footer-card-title">Контакти</h4>
@@ -252,18 +243,6 @@
         </div>
         <div class="footer-card">
           <h4 class="footer-card-title">Соціальні мережі</h4>
-          <!-- <div class="footer-card-row">
-            <h5 class="card-row-title">Адреса:</h5>
-            <p class="card-row-info">м. Київ, вул. Академіка Бутлерова 8</p>
-          </div>
-          <div class="footer-card-row">
-            <h5 class="card-row-title">Телефони:</h5>
-            <p class="card-row-info">+380952066450</p>
-          </div>
-          <div class="footer-card-row">
-            <h5 class="card-row-title">E-mail:</h5>
-            <p class="card-row-info">hotline@agrotep.kiev.ua</p>
-          </div> -->
           <div class="footer-socials">
             <a href="" class="social-link youtube"></a>
             <a href="" class="social-link facebook"></a>
@@ -279,57 +258,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script>
-      var swiper = new Swiper('.my-swiper', {
-        effect: 'cube',
-        direction: 'vertical',
-        // grabCursor: true,
-        speed: 1200,
-        loop: true,
-
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-
-        cubeEffect: {
-          shadow: false,
-          slideShadows: false,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
-    </script>
-
-    <script>
-      function animateItems() {
-        gsap.utils.toArray('.partner-item').forEach((item, index) => {
-          // Створюємо анімацію для кожного елемента
-          gsap.to(item, {
-            filter: 'grayscale(0)', // Змінюємо фільтр на 0 (прибираємо чорно-білий ефект)
-            duration: 0.6, // Тривалість анімації - 0.6 секунди
-            delay: (index + 0.7) * 4, // Затримка для кожного елемента, що дорівнює його індексу, помножена на 4
-            onComplete: () => {
-              // Коли анімація завершена для останнього елемента, ми викликаємо функцію знову для початку анімації
-              setTimeout(() => {
-                gsap.to(item, {
-                  filter: 'grayscale(1)', // Повертаємо фільтр на 1 (застосовуємо чорно-білий ефект)
-                  duration: 0.6, // Тривалість анімації - 1 секунда
-                });
-              }, 2000);
-              if (index === gsap.utils.toArray('.partner-item').length - 1) {
-                animateItems();
-              }
-            },
-          });
-        });
-      }
-
-      // Викликаємо функцію для початку анімації
-      animateItems();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

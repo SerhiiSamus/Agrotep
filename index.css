@@ -66,10 +66,11 @@ header {
   color: #eff3f3;
   /* text-transform: uppercase; */
   letter-spacing: 2px;
-  transition: 0.7s;
+  /* transition: 0.7s; */
 
   /* position: relative;
   color: #2d3a4cd8; */
+  transition: background-color 0.5s, color 0.5s;
 }
 .nav-item:hover {
   /* border: 2px solid #eff3f3;
@@ -137,7 +138,7 @@ header {
   line-height: 150%;
 }
 .hero-btn {
-  max-width: 330px;
+  max-width: max-content;
   padding: 20px;
   border: 2px solid #eff3f3;
   /* border-radius: 20px; */
