@@ -18,6 +18,7 @@ var swiper = new Swiper('.my-swiper', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
@@ -97,7 +98,7 @@ gsap.from('.exp-3d', {
     start: 'bottom bottom',
   },
   y: -575,
-  duration: 1.2,
+  duration: 2,
   delay: 1.6,
   stagger: 0.8,
   opacity: 0,
