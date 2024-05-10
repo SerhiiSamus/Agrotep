@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="careers.css" />
     <title>Careers</title>
   </head>
@@ -24,22 +28,31 @@
           <img class="logo-img" src="assets/svg/logo.svg" alt="" />
           <img class="logo-text" src="assets/img/White_text3.png" alt="" />
         </a>
-        <nav class="navigation">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html" class="nav-item-link">Про нас</a>
-            </li>
-            <li class="nav-item">
-              <a href="autoPark.html" class="nav-item-link">Автопарк</a>
-            </li>
-            <li class="nav-item">
-              <a href="careers.html" class="nav-item-link">Робота</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-item-link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="navigation-container">
+          <nav class="navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-item-link">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a href="aboutUs.html" class="nav-item-link">Про нас</a>
+              </li>
+              <li class="nav-item">
+                <a href="autoPark.html" class="nav-item-link">Автопарк</a>
+              </li>
+              <li class="nav-item">
+                <a href="careers.html" class="nav-item-link">Робота</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-item-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="nav-request-btn extra-top extra-bottom">
+            <span class="nav-request-line"></span>
+            Прорахунок перевезення
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -107,6 +120,115 @@
           </ul>
         </div>
       </section>
+      <div class="modal hide">
+        <div class="modal-body">
+          <span class="close-modal-btn">
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+          <form action="" method="" class="modal-form">
+            <div class="about-info">
+              <legend class="form-legend form-legend-title">
+                Прорахунок запиту
+              </legend>
+              <input
+                type="text"
+                name="name"
+                placeholder="Повне Ім'я *"
+                class="input"
+                required
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Номер телефону"
+                class="input"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Електронна пошта *"
+                class="input"
+                required
+              />
+              <input
+                type="text"
+                name="company"
+                placeholder="Назва компанії *"
+                class="input"
+                required
+              />
+            </div>
+            <div class="address-info">
+              <div class="address">
+                <legend class="form-legend">Адреса завантаження</legend>
+                <input
+                  type="text"
+                  name="shipping-country"
+                  placeholder="Місце завантаження *"
+                  class="input"
+                  required
+                />
+                <input
+                  type="text"
+                  name="shipping-city"
+                  placeholder="Місце замитнення *"
+                  class="input"
+                  required
+                />
+              </div>
+              <div class="address">
+                <legend class="form-legend">Адреса Розвантаження</legend>
+                <input
+                  type="text"
+                  name="destination-country"
+                  placeholder="Місце розвантаження *"
+                  class="input"
+                  required
+                />
+                <input
+                  type="text"
+                  name="destination-city"
+                  placeholder="Місце розмитнення *"
+                  required
+                  class="input"
+                />
+              </div>
+            </div>
+            <div class="additionally-info">
+              <legend class="form-legend">Інформація про вантаж</legend>
+              <input
+                type="text"
+                name=""
+                placeholder="Тип вантажу *"
+                class="input"
+                required
+              />
+              <input
+                type="number"
+                name=""
+                placeholder="Вага *"
+                class="input"
+                required
+              />
+              <select name="" id="" class="input" required>
+                <option value="">--Оберіть тип напівпричепу--</option>
+                <option value="tent">Тент</option>
+                <option value="ref">Рефрижератор</option>
+                <option value="any">Будь-який</option>
+              </select>
+              <input type="date" name="date" class="input" required />
+              <textarea
+                name=""
+                placeholder="Додаткова інформація"
+                class="comment"
+                required
+              ></textarea>
+            </div>
+            <button class="request-btn" type="submit">Відправити запит</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer id="contact" style="background-color: #242b33">
       <div class="footer-content container">
@@ -115,7 +237,10 @@
           <nav class="footer-navigation">
             <ul class="footer-nav-list">
               <li class="footer-nav-item">
-                <a class="nav-item-link" href="index.html">Про нас</a>
+                <a class="nav-item-link" href="index.html">Головна</a>
+              </li>
+              <li class="footer-nav-item">
+                <a class="nav-item-link" href="aboutUs.html">Про нас</a>
               </li>
               <li class="footer-nav-item">
                 <a class="nav-item-link" href="autoPark.html">Автопарк</a>
@@ -124,7 +249,7 @@
                 <a class="nav-item-link" href="careers.html">Робота</a>
               </li>
               <li class="footer-nav-item">
-                <a class="nav-item-link" href="#contact">Контакти</a>
+                <a class="nav-item-link" href="contact.html">Контакти</a>
               </li>
             </ul>
           </nav>
@@ -160,5 +285,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      const btnRequest = document.querySelector('.nav-request-btn');
+      const modal = document.querySelector('.modal');
+      const closeBtn = document.querySelector('.close-modal-btn');
+
+      const showModal = function () {
+        modal.classList.remove('hide');
+        modal.classList.add('show');
+      };
+      const hideModal = function (event) {
+        if (event.target === modal || event.target === closeBtn) {
+          modal.classList.remove('show');
+          modal.classList.add('hide');
+        }
+      };
+      modal.addEventListener('click', hideModal);
+      btnRequest.addEventListener('click', showModal);
+      closeBtn.addEventListener('click', hideModal);
+    </script>
   </body>
 </html>
