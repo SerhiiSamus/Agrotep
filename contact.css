@@ -255,6 +255,7 @@ header {
   align-items: center;
 }
 .request-btn-back {
+  cursor: pointer;
   width: 60%;
   padding: 20px;
   border: 2px solid #eff3f3;
