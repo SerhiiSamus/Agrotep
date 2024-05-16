@@ -80,7 +80,7 @@ gsap.from('.history-text', {
     trigger: '.history',
     start: 'center bottom',
   },
-  xPercent: 120,
+  xPercent: 140,
   duration: 1.2,
   opacity: 0,
 });
