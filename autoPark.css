@@ -295,12 +295,9 @@ header.hidden {
   margin: 10vh 0;
 }
 .about-auto-descript {
-  /* margin-left: calc(120px - 10vw); */
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  /* transform: skewX(20deg); */
-  /* font-size: 28px; */
-  font-size: clamp(16px, 2vw, 28px);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
   color: #ffffff;
   max-width: 55vw;
   margin-bottom: 30px;
@@ -311,7 +308,7 @@ header.hidden {
 .about-auto-list {
   /* box-sizing: border-box; */
   background: linear-gradient(
-    308deg,
+    128deg,
     rgba(6, 24, 48, 1) 0%,
     rgba(38, 56, 82, 1) 30%,
     rgb(111, 120, 123) 100%
@@ -352,6 +349,11 @@ header.hidden {
   border-radius: 50%;
   left: -30px;
   top: calc(50% - 6px);
+}
+.feature {
+  color: #f2cd00;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 /* ADVANTAGES SECTION */
@@ -724,15 +726,49 @@ header.hidden {
   text-align: center;
 }
 
+.feedback-thanks {
+  align-items: center;
+  position: fixed;
+  bottom: 5vh;
+  left: 5vw;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2d3a4c;
+  background-color: #f2cd00;
+  padding: 15px;
+}
+.loader {
+  display: none;
+  width: 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+  background: #f2cd00;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
 .show {
   display: flex;
 }
 .hide {
   display: none;
 }
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
 /* MEDIA  */
 @media screen and (max-width: 1180px) {
-  /* Ваші стилі для екранів менше 1000 пікселів */
   .logo {
     gap: 5px;
     margin-left: 5px;

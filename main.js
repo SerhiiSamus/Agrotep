@@ -6,7 +6,7 @@ var swiper = new Swiper('.my-swiper', {
   loop: true,
 
   autoplay: {
-    delay: 5000,
+    delay: 11000,
     disableOnInteraction: false,
   },
 
@@ -68,9 +68,13 @@ heroTl
     stagger: 0.2,
     // delay: 0.7,
     duration: 0.9,
+  })
+  .from('.nav-request-btn', {
+    opacity: 0,
+    xPercent: 100,
+    duration: 0.9,
+    delay: -0.5,
   });
-// .from('.hero-title', { duration: 2, text: ' Компанія AGROTEP', delay: 0.5 });
-// gsap.from('.hero-title', { duration: 2.2, text: 'AGROTEP', delay: 1.8 });
 gsap.from('.history-text', {
   scrollTrigger: {
     trigger: '.history',
@@ -99,7 +103,7 @@ gsap.from('.exp-3d', {
   },
   xPercent: 270,
   duration: 1,
-  delay: 1.6,
+  delay: 1.2,
   stagger: 0.8,
   // opacity: 0,
   // ease: 'power1.in',

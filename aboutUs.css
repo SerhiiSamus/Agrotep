@@ -165,7 +165,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(45, 59, 77, 0.65);
+  background-color: rgba(45, 59, 77, 0.8);
 }
 .about-us-title {
   font-family: 'Roboto', sans-serif;
@@ -177,10 +177,10 @@ header {
 }
 .about-us-descript {
   text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
   color: #ffffff;
-  font-weight: 350;
-  font-size: clamp(15px, 1.2vw, 20px);
-  line-height: 150%;
   padding: 30px 50px;
 }
 .about-goals {
@@ -256,16 +256,17 @@ header {
 .principles-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .principles-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 200px;
+  width: 210px;
 }
 .principles-img {
   width: 80px;
-  background-color: rgba(45, 59, 77, 0.75);
+  background-color: rgb(45, 58, 76);
   border-radius: 50%;
   padding: 30px;
   border: 3px solid #f2cd00;
@@ -273,6 +274,13 @@ header {
 }
 .service {
   background-image: url(assets/img/bg_service.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+}
+.study {
+  background-image: none;
   padding-top: 100px;
   padding-bottom: 100px;
   background-size: cover;
@@ -511,15 +519,49 @@ header {
   text-align: center;
 }
 
+.feedback-thanks {
+  align-items: center;
+  position: fixed;
+  bottom: 5vh;
+  left: 5vw;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2d3a4c;
+  background-color: #f2cd00;
+  padding: 15px;
+}
+.loader {
+  display: none;
+  width: 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 50px);
+  border-radius: 50%;
+  background: #f2cd00;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
 .show {
   display: flex;
 }
 .hide {
   display: none;
 }
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
 /* MEDIA  */
 @media screen and (max-width: 1180px) {
-  /* Ваші стилі для екранів менше 1000 пікселів */
   .logo {
     gap: 5px;
     margin-left: 5px;

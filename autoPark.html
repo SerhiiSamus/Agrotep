@@ -155,6 +155,30 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div> -->
+        <div class="about-auto-list">
+          <h4 class="about-auto-list-title">Наші тягачі укомплектовані</h4>
+          <ul>
+            <li class="about-auto-list-item">
+              Напівпричепами-рефрижераторами від Schmitz Cargobull - лідера в
+              технології та якості виготовлення європейських вантажних
+              транспортних засобів
+            </li>
+            <li class="about-auto-list-item">
+              Рефрижераторами <span class="feature">Bi-Temp</span> з подвійним
+              температурним режимом
+            </li>
+            <li class="about-auto-list-item">
+              Рефрижераторами <span class="feature">Doubledecker</span> з
+              дворівневим завантаженням на 66 палет
+            </li>
+            <li class="about-auto-list-item">
+              Тентованими напівпричепами об'ємом до 95 м.куб.
+            </li>
+            <li class="about-auto-list-item">
+              Напівпричепами для перевезення текстильних виробів
+            </li>
+          </ul>
+        </div>
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide2">
@@ -177,28 +201,6 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="about-auto-list">
-          <h4 class="about-auto-list-title">Наші тягачі укомплектовані</h4>
-          <ul>
-            <li class="about-auto-list-item">
-              Напівпричепами-рефрижераторами від Schmitz Cargobull - лідера в
-              технології та якості виготовлення європейських вантажних
-              транспортних засобів
-            </li>
-            <li class="about-auto-list-item">
-              Рефрижераторами Bi-Temp з подвійним температурним режимом
-            </li>
-            <li class="about-auto-list-item">
-              Рефрижераторами Doubledecker з дворівневим завантаженням
-            </li>
-            <li class="about-auto-list-item">
-              Тентованими напівпричепами об'ємом до 95 м.куб.
-            </li>
-            <li class="about-auto-list-item">
-              Напівпричепами для перевезення текстильних виробів
-            </li>
-          </ul>
-        </div>
       </section>
       <div class="modal hide">
         <div class="modal-body">
@@ -206,7 +208,12 @@
             <span class="line"></span>
             <span class="line"></span>
           </span>
-          <form action="" method="" class="modal-form">
+          <form
+            name="submit-to-google-sheet"
+            action=""
+            method=""
+            class="modal-form"
+          >
             <div class="about-info">
               <legend class="form-legend form-legend-title">
                 Прорахунок запиту
@@ -244,33 +251,29 @@
                 <legend class="form-legend">Адреса завантаження</legend>
                 <input
                   type="text"
-                  name="shipping-country"
-                  placeholder="Місце завантаження *"
+                  name="upload-location"
+                  placeholder="Місце завантаження"
                   class="input"
-                  required
                 />
                 <input
                   type="text"
-                  name="shipping-city"
-                  placeholder="Місце замитнення *"
+                  name="customs-clearance-start"
+                  placeholder="Місце замитнення"
                   class="input"
-                  required
                 />
               </div>
               <div class="address">
                 <legend class="form-legend">Адреса Розвантаження</legend>
                 <input
                   type="text"
-                  name="destination-country"
-                  placeholder="Місце розвантаження *"
+                  name="unload-location"
+                  placeholder="Місце розвантаження"
                   class="input"
-                  required
                 />
                 <input
                   type="text"
-                  name="destination-city"
-                  placeholder="Місце розмитнення *"
-                  required
+                  name="customs-clearance-end"
+                  placeholder="Місце розмитнення"
                   class="input"
                 />
               </div>
@@ -279,36 +282,43 @@
               <legend class="form-legend">Інформація про вантаж</legend>
               <input
                 type="text"
-                name=""
-                placeholder="Тип вантажу *"
+                name="cargo-information"
+                placeholder="Тип вантажу"
                 class="input"
-                required
               />
               <input
                 type="number"
-                name=""
-                placeholder="Вага *"
+                name="weight"
+                placeholder="Вага"
                 class="input"
-                required
               />
-              <select name="" id="" class="input" required>
-                <option value="">--Оберіть тип напівпричепу--</option>
+              <select name="truck-type" id="" class="input">
+                <option value="">Оберіть тип напівпричепу</option>
                 <option value="tent">Тент</option>
                 <option value="ref">Рефрижератор</option>
                 <option value="any">Будь-який</option>
               </select>
-              <input type="date" name="date" class="input" required />
+              <input type="date" name="date" class="input" />
               <textarea
-                name=""
+                name="message"
                 placeholder="Додаткова інформація"
                 class="comment"
-                required
               ></textarea>
             </div>
-            <button class="request-btn" type="submit">Відправити запит</button>
+            <button class="request-btn" type="submit" style="cursor: pointer">
+              Відправити запит
+            </button>
           </form>
+          <div class="loader"></div>
         </div>
       </div>
+      <span class="feedback-thanks hide">
+        <img
+          src="assets/svg/done.svg"
+          alt=""
+          style="width: 40px; margin-right: 10px"
+        />Запит отримано</span
+      >
     </main>
     <footer id="contact" style="background-color: #242b33">
       <div class="footer-content container">
@@ -399,6 +409,8 @@
       const btnRequest = document.querySelector('.nav-request-btn');
       const modal = document.querySelector('.modal');
       const closeBtn = document.querySelector('.close-modal-btn');
+      const thanks = document.querySelector('.feedback-thanks');
+      const loader = document.querySelector('.loader');
 
       const showModal = function () {
         modal.classList.remove('hide');
@@ -413,6 +425,30 @@
       modal.addEventListener('click', hideModal);
       btnRequest.addEventListener('click', showModal);
       closeBtn.addEventListener('click', hideModal);
+
+      //form to google sheets
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbxU6W56jKgJqc7LY53iq0Jj5Wr3SUQH5KQro9lRTNkBmFLZNm6x_nvFWsGL-r91tfwu/exec';
+      const form = document.forms['submit-to-google-sheet'];
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        loader.style.display = 'block';
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            loader.style.display = 'none';
+            modal.classList.remove('show');
+            modal.classList.add('hide');
+            form.reset();
+            thanks.classList.add('show');
+            thanks.classList.remove('hide');
+            setTimeout(function () {
+              thanks.classList.remove('show');
+              thanks.classList.add('hide');
+            }, 4000);
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
     </script>
   </body>
 </html>
