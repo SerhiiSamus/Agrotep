@@ -55,6 +55,11 @@
             <span class="nav-request-line"></span>
             Прорахунок перевезення
           </button>
+          <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
         </div>
       </div>
     </header>
@@ -89,14 +94,11 @@
       <section class="history">
         <div class="history-container">
           <p class="history-text">
-            Транспортна компанія ТОВ "Агротеп" займає лідерські позиції з
-            регулярних перевезень вантажів по території України, країн ЄС та
-            Азії з 1993 року та є дійсним членом Асоціації міжнародних
-            перевізників України (АсМАП). Постійне оновлення автопарку
-            найсучашнішою технікою та застосування інноваційних технологій в
-            сфері логістики забезпечує надійність та своєчасність кожного
-            перевезення. Ми гарантуємо незмінну найвищу якість кожного
-            перевезення для наших партнерів
+            ТОВ "Агротеп" є лідером у регулярних вантажних перевезеннях по
+            Україні, ЄС та Азії з 1993 року і членом АсМАП. Постійне оновлення
+            автопарку та впровадження інноваційних логістичних технологій
+            гарантують надійність і своєчасність перевезень. Ми забезпечуємо
+            стабільно високу якість послуг для наших партнерів.
           </p>
           <!-- <div class="history-text-bg"></div> -->
           <div class="history-img-bg"></div>
@@ -388,6 +390,7 @@
           <div class="footer-card-row">
             <h5 class="card-row-title">E-mail:</h5>
             <p class="card-row-info">ua@agrotep.com</p>
+            <p class="card-row-info">agrotep@agrotep.com</p>
           </div>
         </div>
         <div class="footer-card">
@@ -456,6 +459,13 @@
           .catch((error) => console.error('Error!', error.message));
       });
     </script>
-    <script></script>
+    <script>
+      const burger = document.querySelector('.burger-menu');
+      const navigation = document.querySelector('.navigation');
+      burger.addEventListener('click', () => {
+        navigation.classList.toggle('show-nav');
+        burger.classList.toggle('active');
+      });
+    </script>
   </body>
 </html>

@@ -50,6 +50,11 @@
             <span class="nav-request-line"></span>
             Прорахунок перевезення
           </button>
+          <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
         </div>
       </div>
     </header>
@@ -73,6 +78,7 @@
             <div class="contact-info-wrap">
               <h4 class="contact-info-title">Електронна адреса</h4>
               <span class="contact-info-content">ua@agrotep.com</span>
+              <span class="contact-info-content">agrotep@agrotep.com</span>
             </div>
           </div>
           <div class="contact-info-adress contact-info-block">
@@ -131,7 +137,11 @@
             <button class="request-btn-back" type="submit">Зв'язатись</button>
           </form>
           <div class="contact-form-img-container">
-            <img class="contact-form-img" src="assets/img/flag2.jpg" alt="" />
+            <img
+              class="contact-form-img"
+              src="assets/img/contact-us.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -291,6 +301,7 @@
           <div class="footer-card-row">
             <h5 class="card-row-title">E-mail:</h5>
             <p class="card-row-info">ua@agrotep.com</p>
+            <p class="card-row-info">agrotep@agrotep.com</p>
           </div>
         </div>
         <div class="footer-card">
@@ -365,6 +376,14 @@
             }, 4000);
           })
           .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <script>
+      const burger = document.querySelector('.burger-menu');
+      const navigation = document.querySelector('.navigation');
+      burger.addEventListener('click', () => {
+        navigation.classList.toggle('show-nav');
+        burger.classList.toggle('active');
       });
     </script>
   </body>

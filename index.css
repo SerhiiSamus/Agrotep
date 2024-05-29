@@ -15,7 +15,6 @@ p {
   margin: 0;
 }
 header {
-  background-color: #2d3a4c;
   background-color: rgba(45, 59, 77, 0.75);
   height: 85px;
   position: fixed;
@@ -35,6 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 85px;
 }
 header.hidden {
   top: -100px; /* або будь-яке інше значення, що виводить шапку за видиму область */
@@ -179,8 +179,8 @@ header.hidden {
   height: 100%;
 }
 .video {
-  height: 55vw;
-  max-height: calc(105vh - 85px);
+  height: 100vh;
+  /* max-height: calc(105vh - 85px); */
   min-height: 65vh;
   width: 100%;
   position: absolute;
@@ -195,8 +195,8 @@ header.hidden {
   flex-direction: column;
   justify-content: space-around;
   /* row-gap: 5vw; */
-  height: calc(60vw - 85px);
-  max-height: calc(105vh - 85px);
+  height: 100vh;
+  /* max-height: calc(105vh - 85px); */
   min-height: calc(65vh - 85px);
 }
 .hero-title {
@@ -259,7 +259,7 @@ header.hidden {
 
 /* HISTORY SECTION */
 .history {
-  padding: 6% 0;
+  padding: 8% 0;
   position: relative;
   background: linear-gradient(
     180deg,
@@ -277,12 +277,13 @@ header.hidden {
 .history-text {
   font-size: 18px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 40px;
   color: #ffffff;
   width: 40%;
   /* text-align: justify; */
   /* padding-top: 5%; */
-  padding-left: 5%;
+  box-sizing: border-box;
+  padding: 0 5%;
   /* background-image: url(assets/svg/bg.svg); */
 }
 /* .history-text-bg {
@@ -316,7 +317,7 @@ header.hidden {
 
 .experience {
   /* background-color: #eff3f3; */
-  height: 500px;
+  height: 700px;
   overflow: hidden;
   /* position: relative; */
 }
@@ -334,7 +335,7 @@ header.hidden {
 .exp-bg-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
 }
 .exp-bg-text {
   font-size: 70px;
@@ -424,7 +425,7 @@ header.hidden {
 .partner-item {
   /* filter: grayscale(1); */
   /* background-color: #ffffff; */
-  height: 11vw;
+  /* height: 11vw; */
 }
 /* .partner-item:hover {
   filter: grayscale(0) !important;
@@ -433,6 +434,8 @@ header.hidden {
 .partner-img {
   width: 11vw;
   height: 11vw;
+  min-width: 150px;
+  min-height: 150px;
 }
 /* SERVICE SECTION */
 .service-section {
@@ -763,7 +766,7 @@ header.hidden {
   padding: 15px;
 }
 .loader {
-  display: none;
+  display: block;
   width: 100px;
   padding: 20px;
   box-sizing: border-box;
@@ -791,6 +794,19 @@ header.hidden {
     transform: rotate(1turn);
   }
 }
+.burger-menu {
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-line {
+  width: 40px;
+  height: 3px;
+  background-color: #eff3f3;
+  transition: all 0.3s ease;
+}
+
 /* MEDIA  */
 @media screen and (max-width: 1180px) {
   .logo {
@@ -815,4 +831,191 @@ header.hidden {
     font-size: 16px;
     width: min-content;
   }
+}
+@media screen and (max-width: 990px) {
+  .burger-menu {
+    display: flex;
+    z-index: 12;
+  }
+  /* .nav-request-btn {
+    text-wrap: nowrap;
+  } */
+  .navigation {
+    z-index: 11;
+    position: fixed;
+    transform: translateX(-100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2d3a4c;
+    transition: all 0.3s ease;
+  }
+  .nav-list {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation-container {
+    width: 50%;
+  }
+  .navigation .nav-item-link {
+    font-size: 32px;
+  }
+  .history-text {
+    position: relative;
+    width: 100%;
+    padding: 5% 5%;
+    z-index: 1;
+    background-color: rgba(45, 59, 77, 0.8);
+  }
+  .exp-bg {
+    flex-direction: column;
+  }
+  .exp-years {
+    margin-right: 0;
+  }
+  .partners-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .partners {
+    max-width: 100%;
+  }
+  /* .partner-item{
+    he
+  } */
+  .exp-content {
+    position: static;
+    max-width: 100%;
+    height: auto;
+  }
+  .history-container {
+    overflow: hidden;
+  }
+  .swiper-pagination-bullets {
+    top: 60% !important;
+    left: 12px !important;
+  }
+  .ref-container {
+    flex-direction: column;
+  }
+  .service-content {
+    width: 100%;
+  }
+  .service-title {
+    max-width: 95vw;
+  }
+  .service-descript {
+    max-width: 95vw;
+  }
+  .service-img {
+    width: 90%;
+    max-width: 600px;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+  .footer-card {
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-card:last-child {
+    width: 100%;
+  }
+  .footer-card .logo {
+    margin-right: 50px;
+  }
+  .footer-card-title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .input {
+    width: 100%;
+  }
+  .hero-title {
+    margin-top: 100px;
+    font-size: 30px;
+    line-height: 130%;
+  }
+  .header .logo-text {
+    display: none;
+  }
+  .navigation-container {
+    width: 70%;
+  }
+  .hero-advant {
+    margin-bottom: 0;
+  }
+  .advant-item {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .advant-item-icon {
+    width: 45px;
+  }
+  .history-text {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .history-img-bg {
+    width: 100%;
+  }
+  .experience {
+    height: 650px;
+  }
+  .exp-years-text {
+    height: auto;
+    text-align: center;
+    margin-top: -125px;
+  }
+  .service-content {
+    gap: 20px;
+  }
+  .service-title {
+    font-size: 28px;
+    line-height: 100%;
+  }
+  .service-descript {
+    font-size: 15px;
+    line-height: 120%;
+  }
+  .footer-card {
+    width: 100%;
+  }
+  .footer-card-title {
+    text-align: center;
+  }
+  .footer-nav-list {
+    height: auto;
+    gap: 15px;
+  }
+  .footer-card:last-child {
+    justify-content: center;
+  }
+}
+
+/* Burger Styles */
+.show-nav {
+  transform: translateX(0);
+}
+.burger-menu.active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 9px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -9px);
 }

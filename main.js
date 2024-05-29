@@ -5,10 +5,10 @@ var swiper = new Swiper('.my-swiper', {
   speed: 1200,
   loop: true,
 
-  autoplay: {
-    delay: 11000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 11000,
+  //   disableOnInteraction: false,
+  // },
 
   cubeEffect: {
     shadow: false,
@@ -115,7 +115,9 @@ window.addEventListener(
   'scroll',
   function () {
     let currentScroll = window.scrollY;
-
+    if (window.innerWidth <= 990) {
+      return; // Якщо ширина вікна менша або дорівнює 990 пікселів, нічого не робимо
+    }
     if (currentScroll < 200) {
       document.querySelector('.header').classList.remove('hidden');
       return; // Вийдіть з функції, якщо перші 100 пікселів

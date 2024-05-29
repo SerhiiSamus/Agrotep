@@ -56,6 +56,11 @@
             <span class="nav-request-line"></span>
             Прорахунок перевезення
           </button>
+          <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
         </div>
       </div>
     </header>
@@ -129,12 +134,9 @@
         <div class="advantages-group">
           <h4 class="advantages-title">Контроль температурного режиму</h4>
           <p class="advantages-descript">
-            Всі транспортні засоби оснащені електронними і механічними
-            термографами з роздруківкою звітної стрічки для контролю
-            температурного режиму при транспортуванні вантажів. Всі напівпричепи
-            мають санітарні паспорти та обов'язкові сертифікати FRC, що
-            підтверджують можливість безпечного транспортування вантажу з
-            температурним режимом
+            Усі транспортні засоби оснащені термографами з роздруківкою звітів.
+            Напівпричепи мають санітарні паспорти та сертифікати FRC для
+            безпечного транспортування вантажу з контрольованою температурою.
           </p>
         </div>
         <!-- <div class="swiper mySwiper2">
@@ -358,6 +360,7 @@
           <div class="footer-card-row">
             <h5 class="card-row-title">E-mail:</h5>
             <p class="card-row-info">ua@agrotep.com</p>
+            <p class="card-row-info">agrotep@agrotep.com</p>
           </div>
         </div>
         <div class="footer-card">
@@ -448,6 +451,14 @@
             }, 4000);
           })
           .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <script>
+      const burger = document.querySelector('.burger-menu');
+      const navigation = document.querySelector('.navigation');
+      burger.addEventListener('click', () => {
+        navigation.classList.toggle('show-nav');
+        burger.classList.toggle('active');
       });
     </script>
   </body>
