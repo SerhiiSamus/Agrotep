@@ -766,7 +766,7 @@ header.hidden {
   padding: 15px;
 }
 .loader {
-  display: block;
+  display: none;
   width: 100px;
   padding: 20px;
   box-sizing: border-box;
