@@ -1003,7 +1003,14 @@ header.hidden {
     justify-content: center;
   }
 }
-
+@media screen and (max-width: 480px) {
+  .footer-card:nth-child(1) {
+    justify-content: start;
+  }
+  .modal-body {
+    width: 100%;
+  }
+}
 /* Burger Styles */
 .show-nav {
   transform: translateX(0);

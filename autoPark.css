@@ -983,6 +983,9 @@ header {
   .footer-card:nth-child(1) {
     justify-content: start;
   }
+    .modal-body {
+    width: 100%;
+  }
 }
 .show-nav {
   transform: translateX(0);

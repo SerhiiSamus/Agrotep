@@ -805,6 +805,9 @@ header {
   .about-auto-list {
     width: auto;
   }
+  .modal-body {
+    width: 100%;
+  }
 }
 .show-nav {
   transform: translateX(0);
