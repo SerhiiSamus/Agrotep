@@ -748,3 +748,6 @@ header {
 .burger-menu.active .burger-line:nth-child(3) {
   transform: rotate(-45deg) translate(10px, -9px);
 }
+.no-scroll {
+  overflow: hidden;
+}
