@@ -50,6 +50,7 @@ header {
   padding-top: 10px;
   height: 25px;
   width: 190px;
+  margin-right: 20px;
 }
 .nav-list {
   padding-left: 0;
@@ -155,6 +156,27 @@ header {
   left: 6px;
   bottom: 2px;
 }
+.lang-menu {
+  display: flex;
+  border: 2px solid #eff3f3;
+  border-radius: 25px;
+}
+.lang {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #eff3f3;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  border-radius: 25px;
+}
+.active-lang {
+  color: #f2cd00;
+  background-color: #eff3f3;
+}
 /* CAREER SECTION */
 .career {
   overflow: hidden;
@@ -173,7 +195,7 @@ header {
   display: flex;
   flex-direction: column;
   /* justify-content: flex-end; */
-  align-items: flex-end;
+  align-items: center;
   /* align-content: center; */
   width: 70%;
   /* padding-left: 15%; */
@@ -831,12 +853,25 @@ header {
     justify-content: center;
   }
 }
+@media screen and (max-width: 580px) {
+  .header {
+    justify-content: stretch;
+    gap: 20px;
+  }
+  .navigation-container {
+    width: 100%;
+    gap: 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .footer-card:nth-child(1) {
     justify-content: start;
   }
   .modal-body {
     width: 100%;
+  }
+  .header .logo {
+    display: none;
   }
 }
 .show-nav {

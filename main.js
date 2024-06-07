@@ -74,6 +74,12 @@ heroTl
     xPercent: 100,
     duration: 0.9,
     delay: -0.5,
+  })
+  .from('.lang-menu', {
+    opacity: 0,
+    xPercent: 100,
+    duration: 0.9,
+    delay: -0.5,
   });
 gsap.from('.history-text', {
   scrollTrigger: {
