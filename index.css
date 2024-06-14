@@ -514,6 +514,7 @@ header.hidden {
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 30px;
+  text-decoration: none;
 }
 .service-img {
   width: 40%;
