@@ -227,6 +227,10 @@ header {
   margin-bottom: 70px;
   margin-top: 0;
 }
+.about-auto-list ul {
+  align-self: flex-start;
+  margin-left: 40px;
+}
 .about-auto-list-title {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
