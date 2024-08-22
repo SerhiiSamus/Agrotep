@@ -38,10 +38,7 @@ header {
 /* header.hidden {
   top: -100px; 
 } */
-.navigation {
-  /* width: 55%; */
-  /* margin: auto; */
-}
+
 .logo {
   display: flex;
   align-items: center;
@@ -351,9 +348,9 @@ header {
 .about-auto-list-title {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 26px;
   color: #ffffff;
-  text-align: center;
+  text-align: start;
   font-weight: 500;
 }
 .about-auto-list-item {
