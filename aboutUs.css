@@ -179,8 +179,8 @@ header {
 /* ABOUT-US SECTION */
 .about-us {
   background-image: url(assets/img/bg_about.jpg);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   background-size: cover;
   background-position: center;
 }
@@ -189,6 +189,7 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: rgba(45, 59, 77, 0.8);
+  margin-bottom: 50px;
 }
 .about-us-title {
   font-family: 'Roboto', sans-serif;
@@ -205,6 +206,18 @@ header {
   line-height: 30px;
   color: #ffffff;
   padding: 30px 50px;
+}
+.about-logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  height: 200px;
+}
+.about-logo-img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
 }
 .about-auto-list {
   /* box-sizing: border-box; */
@@ -266,11 +279,11 @@ header {
   padding-top: 75px;
   padding-bottom: 75px;
   background: linear-gradient(
-    180deg,
+    0deg,
     rgba(45, 58, 76, 1) 0%,
     rgba(60, 73, 89, 1) 20%,
-    rgba(123, 132, 143, 1) 59%,
-    rgba(239, 243, 243, 1) 100%
+    rgb(173, 185, 201) 59%,
+    rgb(45, 58, 76, 1) 100%
   );
 }
 .about-goals-content {
@@ -349,7 +362,11 @@ header {
   border-radius: 50%;
   padding: 30px;
   border: 3px solid #f2cd00;
+  transition: all 0.5s ease;
   /* margin: 10px; */
+}
+.principles-img:hover {
+  transform: scale(1.2);
 }
 .service {
   background-image: url(assets/img/bg_service.jpg);
@@ -651,6 +668,75 @@ header {
   background-color: #eff3f3;
   transition: all 0.3s ease;
 }
+
+.remont-img-container {
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.remont-img-text {
+  color: #eaeaea;
+  font-size: 20px;
+}
+.remont-img-wraper {
+  overflow: hidden;
+}
+.remont-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  background-size: cover;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.remont-img:hover {
+  transform: scale(1.3);
+}
+
+.remont-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Можна змінити колір залежно від бажаного ефекту */
+  opacity: 0.5; /* Ступінь прозорості */
+  z-index: 1; /* Щоб затемнення було поверх фонового зображення */
+}
+.remont-img > * {
+  position: relative;
+  z-index: 2; /* Щоб текст залишався над затемненням */
+}
+.remont-img-1 {
+  background-image: url('assets/img/diagnost.jpg');
+}
+
+.remont-img-2 {
+  background-image: url('assets/img/zvaryval.jpg');
+}
+
+.remont-img-3 {
+  background-image: url('assets/img/ruhtyval1.jpg');
+}
+
+.remont-img-4 {
+  background-image: url('assets/img/shinomomtaj.jpg');
+  background-position-x: right;
+}
+
+.remont-img-5 {
+  background-image: url('assets/img/muika.jpg');
+}
 /* MEDIA  */
 @media screen and (max-width: 1180px) {
   .logo {
@@ -731,6 +817,10 @@ header {
   }
 }
 @media screen and (max-width: 680px) {
+  .about-logo-img {
+    width: 100px;
+    height: 100px;
+  }
   .input {
     width: 100%;
   }
