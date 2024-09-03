@@ -801,7 +801,10 @@ header {
   transition: all 0.3s ease;
 }
 /* MEDIA  */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1320px) {
+  .header {
+    justify-content: space-evenly;
+  }
   .logo {
     gap: 5px;
     margin-left: 5px;
@@ -816,6 +819,7 @@ header {
   }
   .navigation-container {
     justify-content: space-between;
+    gap: 0;
   }
   .nav-item-link {
     font-size: 16px;
@@ -825,7 +829,7 @@ header {
     width: min-content;
   }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1050px) {
   .burger-menu {
     display: flex;
     z-index: 12;
