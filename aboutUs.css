@@ -220,6 +220,139 @@ header {
   height: 150px;
   object-fit: contain;
 }
+.about-partner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 35px;
+  margin-top: 50px;
+  position: relative;
+}
+.about-partner::before {
+  content: '';
+  position: absolute;
+  top: -17px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.about-partner:nth-child(even)::before {
+  background: linear-gradient(to left, #f2cd00 0%, transparent 60%);
+}
+
+.about-partner:nth-child(odd)::before {
+  background: linear-gradient(to right, #f2cd00 0%, transparent 75%);
+}
+.about-partner-logo {
+  max-height: 175px;
+  opacity: 0.4;
+}
+.about-partner-text {
+  padding: 40px;
+  color: #eaeaea;
+  max-width: 70%;
+  font-size: 22px;
+
+  line-height: 145%;
+}
+.about-partner-charter1 {
+  height: 300px;
+}
+
+.about-partner-logo2 {
+  width: 25%;
+  opacity: 0.4;
+}
+.about-partner-text2 {
+  width: 30%;
+  font-size: 22px;
+
+  line-height: 145%;
+  color: #eaeaea;
+}
+.about-partner-charter2 {
+  width: 23%;
+}
+.about-partner-logo3 {
+  max-height: 300px;
+  opacity: 0.6;
+}
+.about-partner-text3 {
+  width: 30%;
+  font-size: 22px;
+
+  line-height: 145%;
+  color: #eaeaea;
+}
+.about-partner-charter3 {
+  width: 23%;
+}
+.mercedes-article {
+  width: 100%;
+  /* background: linear-gradient(180deg, #000 130px, #2e2e2e 300px, #000 1000px); */
+  background: linear-gradient(to bottom, #171717 0, #333 100%);
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+.mercedes-text {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 150%;
+  max-width: 50%;
+}
+.mercedes-logo {
+  max-width: 45%;
+  max-height: 100%;
+}
+.schmitz-carrier-article {
+  width: 100%;
+  /* background: linear-gradient(180deg, #000 130px, #2e2e2e 300px, #000 1000px); */
+  background-color: rgb(21, 44, 115); /* Синій фон */
+  background-image: linear-gradient(
+    to right,
+    rgba(24, 145, 246, 1) 0%,
+    rgba(24, 145, 246, 0) 97%
+  ); /* Градієнт поверх */
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+.schmitz-carrier-text {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 50%;
+}
+.schmitz-carrier-logos {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10%;
+  justify-content: space-evenly;
+  max-width: 500px;
+}
+.schmitz-logo {
+  max-height: 45%;
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+.carrier-logo {
+  max-height: 45%;
+  max-width: 100%;
+}
 .about-auto-list {
   /* box-sizing: border-box; */
   background: linear-gradient(
@@ -277,13 +410,12 @@ header {
   font-size: 18px;
 }
 .about-goals {
-  padding-top: 75px;
   padding-bottom: 75px;
   background: linear-gradient(
-    0deg,
+    90deg,
     rgba(45, 58, 76, 1) 0%,
     rgba(60, 73, 89, 1) 20%,
-    rgb(173, 185, 201) 59%,
+    rgb(173, 185, 201) 45%,
     rgb(45, 58, 76, 1) 100%
   );
 }
@@ -322,7 +454,7 @@ header {
   padding: 30px 0;
 }
 .auto {
-  background-image: url(assets/img/bg_auto.jpg);
+  background-image: url(assets/img/photo2_mercedes.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
   background-size: cover;
@@ -364,7 +496,7 @@ header {
   padding: 30px;
   border: 3px solid #f2cd00;
   transition: all 0.5s ease;
-  /* margin: 10px; */
+  box-shadow: 3px 3px 11px -1px;
 }
 .principles-img:hover {
   transform: scale(1.2);
@@ -682,7 +814,10 @@ header {
 .remont-img-text {
   color: #eaeaea;
   font-size: 20px;
+  transition: 0.3s ease-in-out;
+  transform: scale(0.833);
 }
+
 .remont-img-wraper {
   overflow: hidden;
 }
@@ -694,16 +829,13 @@ header {
   text-align: center;
   width: 200px;
   height: 200px;
-  background-color: white;
+  /* background-color: rgba(0, 0, 0, 0.306); */
   background-size: cover;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-.remont-img:hover {
-  transform: scale(1.3);
+  transition: 0.3s ease-in-out;
 }
 
-.remont-img::before {
+.remont-img::after {
   content: '';
   position: absolute;
   top: 0;
@@ -718,25 +850,84 @@ header {
   position: relative;
   z-index: 2; /* Щоб текст залишався над затемненням */
 }
-.remont-img-1 {
+.remont-img-1:before {
   background-image: url('assets/img/diagnost.jpg');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
 }
 
-.remont-img-2 {
+.remont-img-2:before {
   background-image: url('assets/img/zvaryval.jpg');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
 }
 
-.remont-img-3 {
+.remont-img-3:before {
   background-image: url('assets/img/ruhtyval1.jpg');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
 }
 
-.remont-img-4 {
+.remont-img-4:before {
   background-image: url('assets/img/shinomomtaj.jpg');
   background-position-x: right;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.3s ease-in-out;
 }
 
-.remont-img-5 {
+.remont-img-5:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('assets/img/muika.jpg');
+  background-size: cover;
+  transition: 0.3s ease-in-out;
+}
+.remont-img-1:hover:before {
+  transform: scale(1.2);
+}
+
+.remont-img-2:hover:before {
+  transform: scale(1.2);
+}
+
+.remont-img-3:hover:before {
+  transform: scale(1.2);
+}
+
+.remont-img-4:hover:before {
+  transform: scale(1.2);
+}
+
+.remont-img-5:hover:before {
+  transform: scale(1.2);
 }
 /* MEDIA  */
 @media screen and (max-width: 1320px) {

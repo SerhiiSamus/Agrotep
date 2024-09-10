@@ -239,15 +239,15 @@ header {
   display: block;
   width: 100%;
 }
-.mySwiper2::before {
+/* .mySwiper2::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
   height: 0;
-  border-bottom: 1000px solid transparent; /* Верхня сторона */
-  border-left: 200px solid #2d3a4c; /* Ліва сторона */
+  border-bottom: 1000px solid transparent; 
+  border-left: 200px solid #2d3a4c; 
   z-index: 3;
 }
 .mySwiper2::after {
@@ -261,7 +261,7 @@ header {
   border-right: 200px solid transparent;
   z-index: 3;
   rotate: 180deg;
-}
+} */
 .swiper-pagination-bullet {
   margin-top: 10px !important;
   margin-bottom: 10px !important;
