@@ -896,9 +896,9 @@ header {
     transform: none;
     line-height: 110%;
   }
-  .swiper-img2 {
+  /* .swiper-img2 {
     min-width: 900px;
-  }
+  } */
   .mySwiper2::before {
     border-left: 100px solid #2d3a4c; /* Ліва сторона */
   }
