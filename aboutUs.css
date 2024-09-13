@@ -246,7 +246,7 @@ header {
 }
 .about-partner-logo {
   width: 25%;
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 .about-partner-text {
   padding: 40px;
@@ -267,7 +267,7 @@ header {
 }
 .about-partner-logo2 {
   width: 45%;
-  opacity: 0.4;
+  /* opacity: 0.4; */
   object-fit: contain;
 }
 .about-partner-text2 {
@@ -288,7 +288,7 @@ header {
 }
 .about-partner-logo3 {
   width: 25%;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   object-fit: contain;
 }
 .about-partner-text3 {
@@ -301,67 +301,7 @@ header {
   width: 30%;
   object-fit: contain;
 }
-.mercedes-article {
-  width: 100%;
-  /* background: linear-gradient(180deg, #000 130px, #2e2e2e 300px, #000 1000px); */
-  background: linear-gradient(to bottom, #171717 0, #333 100%);
-  display: flex;
-  padding: 30px;
-  align-items: center;
-  gap: 20px;
-  box-sizing: border-box;
-  justify-content: space-evenly;
-}
-.mercedes-text {
-  font-family: 'Inter', sans-serif;
-  color: white;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 150%;
-  max-width: 50%;
-}
-.mercedes-logo {
-  max-width: 45%;
-  max-height: 100%;
-}
-.schmitz-carrier-article {
-  width: 100%;
-  /* background: linear-gradient(180deg, #000 130px, #2e2e2e 300px, #000 1000px); */
-  background-color: rgb(21, 44, 115); /* Синій фон */
-  background-image: linear-gradient(
-    to right,
-    rgba(24, 145, 246, 1) 0%,
-    rgba(24, 145, 246, 0) 97%
-  ); /* Градієнт поверх */
-  display: flex;
-  padding: 30px;
-  gap: 20px;
-  box-sizing: border-box;
-  justify-content: space-evenly;
-}
-.schmitz-carrier-text {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 150%;
-  max-width: 50%;
-}
-.schmitz-carrier-logos {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10%;
-  justify-content: space-evenly;
-  width: 40%;
-}
-.schmitz-logo {
-  max-height: 45%;
-  max-width: 500px;
-}
-.carrier-logo {
-  max-height: 45%;
-  max-width: 500px;
-}
+
 .about-auto-list {
   /* box-sizing: border-box; */
   background: linear-gradient(
@@ -420,13 +360,14 @@ header {
 }
 .about-goals {
   padding-bottom: 75px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(45, 58, 76, 1) 0%,
     rgba(60, 73, 89, 1) 20%,
     rgb(173, 185, 201) 45%,
     rgb(45, 58, 76, 1) 100%
-  );
+  ); */
+  background: linear-gradient(270deg, #222f4e 58.52%, #174ac3 132.89%);
 }
 .about-goals-content {
   display: flex;
@@ -1152,31 +1093,6 @@ header {
   .about-partner-text2 {
     width: 60%;
   }
-  .mercedes-article {
-    flex-direction: column;
-  }
-  .mercedes-text {
-    max-width: 100%;
-  }
-  .mercedes-logo {
-    max-width: 65%;
-  }
-  .schmitz-carrier-article {
-    flex-direction: column-reverse;
-  }
-  .schmitz-carrier-text {
-    max-width: 100%;
-  }
-  .schmitz-carrier-logos {
-    flex-direction: row;
-    width: 100%;
-  }
-  .schmitz-logo {
-    width: 50%;
-  }
-  .carrier-logo {
-    width: 50%;
-  }
 }
 @media screen and (max-width: 580px) {
   .header {
@@ -1229,14 +1145,6 @@ header {
   }
   .about-partner-logo3 {
     width: 90%;
-  }
-  .mercedes-text {
-    font-size: 14px;
-    line-height: 140%;
-  }
-  .schmitz-carrier-text {
-    font-size: 14px;
-    line-height: 140%;
   }
 }
 .show-nav {

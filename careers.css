@@ -232,13 +232,7 @@ header {
 }
 .career-job {
   /* height: 100vh; */
-  background: linear-gradient(
-    90deg,
-    rgba(45, 58, 76, 1) 0%,
-    rgba(60, 73, 89, 1) 20%,
-    rgba(123, 132, 143, 1) 59%,
-    rgba(239, 243, 243, 1) 100%
-  );
+  background: linear-gradient(270deg, #222f4e 58.52%, #174ac3 132.89%);
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
