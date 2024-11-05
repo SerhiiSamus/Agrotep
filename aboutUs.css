@@ -179,10 +179,18 @@ header {
 /* ABOUT-US SECTION */
 .about-us {
   background-image: url(assets/img/bg_about.jpg);
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 100px;
+  padding-bottom: 200px;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+}
+.about-us-main-title {
+  color: #ffffff;
+  text-shadow: 7px 11px 4.5px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 600;
+  margin-left: 75px;
 }
 .about-us-content {
   display: flex;
@@ -201,12 +209,13 @@ header {
 }
 .about-us-descript {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 30px;
   color: #ffffff;
   padding: 30px 50px;
 }
+
 .about-logo {
   display: flex;
   width: 100%;

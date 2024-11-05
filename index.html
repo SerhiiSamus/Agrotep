@@ -74,17 +74,18 @@
     </header>
     <main>
       <section class="hero">
-        <div class="video-container">
+        <!-- <div class="video-container">
           <video class="video" autoplay loop muted>
             <source src="assets/video/back_video3.mp4" type="video/mp4" />
           </video>
-        </div>
+        </div> -->
         <div class="hero-content container">
+          <img src="assets/img/name.png" alt="" class="hero-name" />
           <h1 class="hero-title">
             Лідер міжнародних рефрижераторних перевезень
           </h1>
           <button class="hero-btn">Отримати консультацію</button>
-          <div class="hero-advant">
+          <!-- <div class="hero-advant">
             <div class="advant-item">
               <img class="advant-item-icon" src="assets/svg/price.svg" alt="" />
               <span class="advant-item-text">Грамотна цінова політика</span>
@@ -97,17 +98,18 @@
               <img class="advant-item-icon" src="assets/svg/lider.svg" alt="" />
               <span class="advant-item-text">Лідери ринку</span>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="history">
         <div class="history-container">
           <p class="history-text">
-            ТОВ "АГРОТЕП" є лідером у регулярних вантажних перевезеннях по
-            Україні, ЄС та Азії з 1993 року. Постійне оновлення автопарку та
-            впровадження інноваційних логістичних технологій гарантують
-            надійність і своєчасність перевезень. Більше 30 років ми
-            забезпечуємо стабільно високу якість послуг для наших партнерів.
+            ТОВ "<span class="feature">АГРОТЕП</span>" є лідером у регулярних
+            вантажних перевезеннях по Україні, ЄС та Азії з 1993 року. Постійне
+            оновлення автопарку та впровадження інноваційних логістичних
+            технологій гарантують надійність і своєчасність перевезень. Більше
+            <span class="feature">30 років</span> ми забезпечуємо стабільно
+            високу якість послуг для наших партнерів.
           </p>
           <!-- <div class="history-text-bg"></div> -->
           <div class="history-img-bg"></div>
@@ -138,7 +140,7 @@
           </div>
         </div>
       </section>
-      <section class="partners-section">
+      <!-- <section class="partners-section">
         <div class="partners">
           <div class="partner-item">
             <img class="partner-img" src="assets/img/mac1.png" alt="" />
@@ -155,9 +157,6 @@
           <div class="partner-item">
             <img class="partner-img" src="assets/img/Laktalis1.png" alt="" />
           </div>
-          <!-- <div class="partner-item">
-            <img class="partner-img" src="assets/img/darn1.png" alt="" />
-          </div> -->
           <div class="partner-item">
             <img class="partner-img" src="assets/img/mti.png" alt="" />
           </div>
@@ -179,8 +178,8 @@
             досягненні нових вершин у цій галузі
           </p>
         </div>
-      </section>
-      <section class="service-section">
+      </section> -->
+      <!-- <section class="service-section">
         <div class="swiper my-swiper">
           <div class="swiper-pagination swiper-pagination-clickable"></div>
           <div class="swiper-wrapper">
@@ -247,6 +246,55 @@
             </div>
           </div>
         </div>
+      </section> -->
+      <section class="locations">
+        <img src="assets/img/map.jpg" alt="" class="location-map" />
+        <form
+          action=""
+          method=""
+          class="modal-form location-form"
+          name="submit-to-google-sheet-contact"
+        >
+          <div class="about-info">
+            <legend class="form-legend form-legend-title location-legend">
+              Розкажіть про вантаж — ми знайдемо рішення!
+            </legend>
+            <input
+              type="text"
+              name="name"
+              placeholder="Ім'я *"
+              class="input location-input"
+              required=""
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Номер телефону *"
+              class="input location-input"
+              required=""
+            />
+
+            <input
+              type="text"
+              name="upload-location"
+              placeholder="Місце завантаження"
+              class="input location-input"
+            />
+            <input
+              type="text"
+              name="unload-location"
+              placeholder="Місце розвантаження"
+              class="input location-input"
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Додаткова інформація"
+            class="comment location-comment"
+            required=""
+          ></textarea>
+          <button class="request-btn" type="submit">Зв'язатись</button>
+        </form>
       </section>
       <div class="modal hide">
         <div class="modal-body">
@@ -421,6 +469,7 @@
           </a>
         </div>
       </div>
+      <p class="copyright">© ТОВ “Агротеп” 1993 - 2024 / Всі права захищені</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
